@@ -1,0 +1,19 @@
+why CNN better than MLP :
+
+Imagine trying to identify a cat in a photo. An MLP might struggle because it doesn’t naturally focus on parts of the image, it’ll try to look at everything at once. But a CNN starts by recognizing the edges of the cat, then the shapes like ears and eyes, and finally pieces these together to identify the whole cat. This “piece-by-piece” approach is why CNNs are so good at vision tasks and often outperform MLPs in these area
+
+Because CNNs use a sliding window (or kernel) that moves over the input data, they are translation invariant. This means they can detect features like a nose on a face regardless of where it appears in the image. This ability to recognize features anywhere in the image makes CNNs much more powerful for computer vision tasks than classic MLPs.
+
+
+process of CNN : 
+
+1 - convolution layer,  convolve image using filter that detect edge other componentes of the image
+
+2 - activition layer (no linear activition function), most used one, sigmoid, relu, leaky, the output  sent to next layer as input
+
+3  pooling layer, can be seen tween conv layer and cnn archetecture, this layer reduce number of parameters and comutation
+in the network, controling overfitting by reducing progressevely the spatial size of the network (max pool) it take max of each matrix to create new one contains max of value  
+
+- the three layers can be repeat multiple times in a network make network deeper (deep learning)
+
+4 - 
