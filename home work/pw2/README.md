@@ -12,5 +12,14 @@ python super_resolve.py --input_image dataset/BSDS300/images/test/89072.jpg --mo
 * run "run_test.sh" by chosing photo from test dataset 
 
 
-exemple in: ![inputs](outputs/in.png)
+exemple in: ![inputs](outputs/in.jpg)
+
+
+
+
+
+
+
+
+
 exemple out:![outputs](outputs/out.png)
