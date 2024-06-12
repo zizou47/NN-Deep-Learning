@@ -4,22 +4,13 @@ This is a supporting repository you'll use for the Practical Work 2 on the chapt
 
 ## Usage:
 
-### Train
 
-`sh run_train.sh`
+### RUN pw 2
+python super_resolve.py --input_image dataset/BSDS300/images/test/89072.jpg --model model_epoch_50.pth --output_filename out.png
+* make sure you are in the pw2 path cd "C:\Users\yazid\Desktop\NN-Deep-Learning-main\home work\pw2" depends on your machine
+* install conda install graphviz, conda install python-graphviz
+* run "run_test.sh" by chosing photo from test dataset 
 
-You can modify the parameters inside this file:
-- --upscale_factor (int): How much to upscale the image
-- --batch_size (int): Batch size 
-- --test_batch_size (int): Batch size for testing
-- --nb_epochs (int): How many train epochs
-- --lr (float): The Learning Rate (LR) for training
 
-### Run on an image
-
-`sh run_test.sh`
-
-You can modify the parameters inside this file:
-- --input_image (str): The image you want to upscale
-- --model (str): The path to your model
-- --output_filename (str): The final upscaled image to be saved
+exemple : ![inputs](outputs/in.png)
+          ![inputs](outputs/out.png)

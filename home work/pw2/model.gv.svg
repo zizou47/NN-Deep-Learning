@@ -17,7 +17,7 @@
 <text text-anchor="start" x="43" y="-477" font-family="Linux libertine" font-size="10.00">input&#45;tensor</text>
 <text text-anchor="start" x="52" y="-466" font-family="Linux libertine" font-size="10.00">depth:0</text>
 <polygon fill="none" stroke="black" points="100,-458 100,-490 178,-490 178,-458 100,-458"/>
-<text text-anchor="start" x="105" y="-471.5" font-family="Linux libertine" font-size="10.00">(1, 1, 481, 321)</text>
+<text text-anchor="start" x="105" y="-471.5" font-family="Linux libertine" font-size="10.00">(1, 1, 321, 481)</text>
 </g>
 <!-- 1 -->
 <g id="node2" class="node">
@@ -29,11 +29,11 @@
 <polygon fill="none" stroke="black" points="65,-401 65,-422 109,-422 109,-401 65,-401"/>
 <text text-anchor="start" x="74.5" y="-409" font-family="Linux libertine" font-size="10.00">input:</text>
 <polygon fill="none" stroke="black" points="109,-401 109,-422 195,-422 195,-401 109,-401"/>
-<text text-anchor="start" x="116.5" y="-409" font-family="Linux libertine" font-size="10.00">(1, 1, 481, 321) </text>
+<text text-anchor="start" x="116.5" y="-409" font-family="Linux libertine" font-size="10.00">(1, 1, 321, 481) </text>
 <polygon fill="none" stroke="black" points="65,-380 65,-401 109,-401 109,-380 65,-380"/>
 <text text-anchor="start" x="70" y="-388" font-family="Linux libertine" font-size="10.00">output: </text>
 <polygon fill="none" stroke="black" points="109,-380 109,-401 195,-401 195,-380 109,-380"/>
-<text text-anchor="start" x="114" y="-388" font-family="Linux libertine" font-size="10.00">(1, 64, 481, 321) </text>
+<text text-anchor="start" x="114" y="-388" font-family="Linux libertine" font-size="10.00">(1, 64, 321, 481) </text>
 </g>
 <!-- 0&#45;&gt;1 -->
 <g id="edge1" class="edge">
@@ -51,11 +51,11 @@
 <polygon fill="none" stroke="black" points="65,-323 65,-344 109,-344 109,-323 65,-323"/>
 <text text-anchor="start" x="74.5" y="-331" font-family="Linux libertine" font-size="10.00">input:</text>
 <polygon fill="none" stroke="black" points="109,-323 109,-344 195,-344 195,-323 109,-323"/>
-<text text-anchor="start" x="114" y="-331" font-family="Linux libertine" font-size="10.00">(1, 64, 481, 321) </text>
+<text text-anchor="start" x="114" y="-331" font-family="Linux libertine" font-size="10.00">(1, 64, 321, 481) </text>
 <polygon fill="none" stroke="black" points="65,-302 65,-323 109,-323 109,-302 65,-302"/>
 <text text-anchor="start" x="70" y="-310" font-family="Linux libertine" font-size="10.00">output: </text>
 <polygon fill="none" stroke="black" points="109,-302 109,-323 195,-323 195,-302 109,-302"/>
-<text text-anchor="start" x="114" y="-310" font-family="Linux libertine" font-size="10.00">(1, 64, 481, 321) </text>
+<text text-anchor="start" x="114" y="-310" font-family="Linux libertine" font-size="10.00">(1, 64, 321, 481) </text>
 </g>
 <!-- 1&#45;&gt;2 -->
 <g id="edge2" class="edge">
@@ -73,11 +73,11 @@
 <polygon fill="none" stroke="black" points="65,-245 65,-266 109,-266 109,-245 65,-245"/>
 <text text-anchor="start" x="74.5" y="-253" font-family="Linux libertine" font-size="10.00">input:</text>
 <polygon fill="none" stroke="black" points="109,-245 109,-266 195,-266 195,-245 109,-245"/>
-<text text-anchor="start" x="114" y="-253" font-family="Linux libertine" font-size="10.00">(1, 64, 481, 321) </text>
+<text text-anchor="start" x="114" y="-253" font-family="Linux libertine" font-size="10.00">(1, 64, 321, 481) </text>
 <polygon fill="none" stroke="black" points="65,-224 65,-245 109,-245 109,-224 65,-224"/>
 <text text-anchor="start" x="70" y="-232" font-family="Linux libertine" font-size="10.00">output: </text>
 <polygon fill="none" stroke="black" points="109,-224 109,-245 195,-245 195,-224 109,-224"/>
-<text text-anchor="start" x="114" y="-232" font-family="Linux libertine" font-size="10.00">(1, 64, 481, 321) </text>
+<text text-anchor="start" x="114" y="-232" font-family="Linux libertine" font-size="10.00">(1, 64, 321, 481) </text>
 </g>
 <!-- 2&#45;&gt;3 -->
 <g id="edge3" class="edge">
@@ -95,11 +95,11 @@
 <polygon fill="none" stroke="black" points="65,-167 65,-188 109,-188 109,-167 65,-167"/>
 <text text-anchor="start" x="74.5" y="-175" font-family="Linux libertine" font-size="10.00">input:</text>
 <polygon fill="none" stroke="black" points="109,-167 109,-188 195,-188 195,-167 109,-167"/>
-<text text-anchor="start" x="114" y="-175" font-family="Linux libertine" font-size="10.00">(1, 64, 481, 321) </text>
+<text text-anchor="start" x="114" y="-175" font-family="Linux libertine" font-size="10.00">(1, 64, 321, 481) </text>
 <polygon fill="none" stroke="black" points="65,-146 65,-167 109,-167 109,-146 65,-146"/>
 <text text-anchor="start" x="70" y="-154" font-family="Linux libertine" font-size="10.00">output: </text>
 <polygon fill="none" stroke="black" points="109,-146 109,-167 195,-167 195,-146 109,-146"/>
-<text text-anchor="start" x="114" y="-154" font-family="Linux libertine" font-size="10.00">(1, 64, 481, 321) </text>
+<text text-anchor="start" x="114" y="-154" font-family="Linux libertine" font-size="10.00">(1, 64, 321, 481) </text>
 </g>
 <!-- 3&#45;&gt;4 -->
 <g id="edge4" class="edge">
@@ -117,11 +117,11 @@
 <polygon fill="none" stroke="black" points="86,-89 86,-110 130,-110 130,-89 86,-89"/>
 <text text-anchor="start" x="95.5" y="-97" font-family="Linux libertine" font-size="10.00">input:</text>
 <polygon fill="none" stroke="black" points="130,-89 130,-110 216,-110 216,-89 130,-89"/>
-<text text-anchor="start" x="135" y="-97" font-family="Linux libertine" font-size="10.00">(1, 64, 481, 321) </text>
+<text text-anchor="start" x="135" y="-97" font-family="Linux libertine" font-size="10.00">(1, 64, 321, 481) </text>
 <polygon fill="none" stroke="black" points="86,-68 86,-89 130,-89 130,-68 86,-68"/>
 <text text-anchor="start" x="91" y="-76" font-family="Linux libertine" font-size="10.00">output: </text>
 <polygon fill="none" stroke="black" points="130,-68 130,-89 216,-89 216,-68 130,-68"/>
-<text text-anchor="start" x="137.5" y="-76" font-family="Linux libertine" font-size="10.00">(1, 1, 962, 642) </text>
+<text text-anchor="start" x="137.5" y="-76" font-family="Linux libertine" font-size="10.00">(1, 1, 642, 962) </text>
 </g>
 <!-- 4&#45;&gt;5 -->
 <g id="edge5" class="edge">
@@ -137,7 +137,7 @@
 <text text-anchor="start" x="40" y="-19" font-family="Linux libertine" font-size="10.00">output&#45;tensor</text>
 <text text-anchor="start" x="52" y="-8" font-family="Linux libertine" font-size="10.00">depth:0</text>
 <polygon fill="none" stroke="black" points="103,0 103,-32 181,-32 181,0 103,0"/>
-<text text-anchor="start" x="108" y="-13.5" font-family="Linux libertine" font-size="10.00">(1, 1, 962, 642)</text>
+<text text-anchor="start" x="108" y="-13.5" font-family="Linux libertine" font-size="10.00">(1, 1, 642, 962)</text>
 </g>
 <!-- 5&#45;&gt;6 -->
 <g id="edge6" class="edge">
