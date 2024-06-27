@@ -43,10 +43,36 @@ strict digraph model {
                     </TR>
                     <TR>
                         <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 64, 321, 481) </TD>
+                        <TD COLSPAN="2">(1, 32, 321, 481) </TD>
                     </TR>
                     </TABLE>> fillcolor=darkseagreen1]
 	4 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">ReLU<BR/>depth:1</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 32, 321, 481) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 32, 321, 481) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	5 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2">Conv2d<BR/>depth:1</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 32, 321, 481) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 64, 321, 481) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	6 [label=<
                     <TABLE BORDER="0" CELLBORDER="1"
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
@@ -59,23 +85,36 @@ strict digraph model {
                         <TD COLSPAN="2">(1, 64, 321, 481) </TD>
                     </TR>
                     </TABLE>> fillcolor=darkseagreen1]
-	5 [label=<
+	7 [label=<
                     <TABLE BORDER="0" CELLBORDER="1"
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
-                        <TD ROWSPAN="2">ConvTranspose2d<BR/>depth:1</TD>
+                        <TD ROWSPAN="2">Conv2d<BR/>depth:1</TD>
                         <TD COLSPAN="2">input:</TD>
                         <TD COLSPAN="2">(1, 64, 321, 481) </TD>
                     </TR>
                     <TR>
                         <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 1, 642, 962) </TD>
+                        <TD COLSPAN="2">(1, 9, 321, 481) </TD>
                     </TR>
                     </TABLE>> fillcolor=darkseagreen1]
-	6 [label=<
+	8 [label=<
                     <TABLE BORDER="0" CELLBORDER="1"
                     CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>output-tensor<BR/>depth:0</TD><TD>(1, 1, 642, 962)</TD></TR>
+                    <TR>
+                        <TD ROWSPAN="2">PixelShuffle<BR/>depth:1</TD>
+                        <TD COLSPAN="2">input:</TD>
+                        <TD COLSPAN="2">(1, 9, 321, 481) </TD>
+                    </TR>
+                    <TR>
+                        <TD COLSPAN="2">output: </TD>
+                        <TD COLSPAN="2">(1, 1, 963, 1443) </TD>
+                    </TR>
+                    </TABLE>> fillcolor=darkseagreen1]
+	9 [label=<
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD>output-tensor<BR/>depth:0</TD><TD>(1, 1, 963, 1443)</TD></TR>
                     </TABLE>> fillcolor=lightyellow]
 	0 -> 1
 	1 -> 2
@@ -83,4 +122,7 @@ strict digraph model {
 	3 -> 4
 	4 -> 5
 	5 -> 6
+	6 -> 7
+	7 -> 8
+	8 -> 9
 }

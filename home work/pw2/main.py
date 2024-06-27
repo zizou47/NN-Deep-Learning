@@ -9,7 +9,46 @@ from torch.utils.data import DataLoader
 
 from data import get_test_set, get_training_set
 
-def main():
+def train(epoch):
+    epoch_loss = 0
+    for iteration, batch in enumerate(training_data_loader, 1):
+        input, target = batch[0].to(device), batch[1].to(device)
+
+        optimizer.zero_grad()
+        loss = criterion(model(input), target)
+        epoch_loss += loss.item()
+        loss.backward()
+        optimizer.step()
+
+        print(
+            f"===> Epoch[{epoch}]({iteration}/{len(training_data_loader)}): Loss: {loss.item():.4f}"
+        )
+
+    print(
+        f"===> Epoch {epoch} Complete: Avg. Loss: {epoch_loss / len(training_data_loader):.4f}"
+    )
+
+
+def test():
+    avg_psnr = 0
+    with torch.no_grad():
+        for batch in testing_data_loader:
+            input, target = batch[0].to(device), batch[1].to(device)
+
+            prediction = model(input)
+            mse = criterion(prediction, target)
+            psnr = 10 * log10(1 / mse.item())
+            avg_psnr += psnr
+    print(f"===> Avg. PSNR: {avg_psnr / len(testing_data_loader):.4f} dB")
+
+
+def checkpoint(epoch):
+    model_out_path = f"model_epoch_{epoch}.pth"
+    torch.save(model, model_out_path)
+    print(f"Checkpoint saved to {model_out_path}")
+
+
+if __name__ == '__main__':
     # Training settings
     parser = argparse.ArgumentParser(description="PyTorch Super Res Example")
     parser.add_argument(
@@ -55,6 +94,8 @@ def main():
     print("===> Loading datasets")
     train_set = get_training_set(opt.upscale_factor)
     test_set = get_test_set(opt.upscale_factor)
+    
+    # Set num_workers to a value greater than 0 to use multiprocessing for data loading
     training_data_loader = DataLoader(
         dataset=train_set, num_workers=opt.threads, batch_size=opt.batch_size, shuffle=True
     )
@@ -71,47 +112,8 @@ def main():
 
     optimizer = optim.Adam(model.parameters(), lr=opt.lr)
 
-    def train(epoch):
-        epoch_loss = 0
-        for iteration, batch in enumerate(training_data_loader, 1):
-            input, target = batch[0].to(device), batch[1].to(device)
-
-            optimizer.zero_grad()
-            loss = criterion(model(input), target)
-            epoch_loss += loss.item()
-            loss.backward()
-            optimizer.step()
-
-            print(
-                f"===> Epoch[{epoch}]({iteration}/{len(training_data_loader)}): Loss: {loss.item():.4f}"
-            )
-
-        print(
-            f"===> Epoch {epoch} Complete: Avg. Loss: {epoch_loss / len(training_data_loader):.4f}"
-        )
-
-    def test():
-        avg_psnr = 0
-        with torch.no_grad():
-            for batch in testing_data_loader:
-                input, target = batch[0].to(device), batch[1].to(device)
-
-                prediction = model(input)
-                mse = criterion(prediction, target)
-                psnr = 10 * log10(1 / mse.item())
-                avg_psnr += psnr
-        print(f"===> Avg. PSNR: {avg_psnr / len(testing_data_loader):.4f} dB")
-
-    def checkpoint(epoch):
-        model_out_path = f"model_epoch_{epoch}.pth"
-        torch.save(model, model_out_path)
-        print(f"Checkpoint saved to {model_out_path}")
-
     for epoch in range(1, opt.nb_epochs + 1):
         train(epoch)
         test()
 
     checkpoint(opt.nb_epochs)
-
-if __name__ == '__main__':
-    main()
